@@ -37,6 +37,9 @@ dependencies {
     // pagenation
     implementation 'com.github.pagehelper:pagehelper-spring-boot-starter:1.4.6'
 
+    //TODO: Security
+//    implementation 'org.springframework.boot:spring-boot-starter-security:3.0.6'
+
 
 }
 
