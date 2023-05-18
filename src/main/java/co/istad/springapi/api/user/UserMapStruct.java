@@ -1,5 +1,6 @@
 package co.istad.springapi.api.user;
 
+import co.istad.springapi.api.auth.web.RegisterDto;
 import co.istad.springapi.api.user.web.CreateUserDto;
 import co.istad.springapi.api.user.web.UpdateUserDto;
 import co.istad.springapi.api.user.web.UserDto;
@@ -15,5 +16,6 @@ public interface UserMapStruct {
 
     PageInfo<UserDto> userPageInfoToUserDtoPageInfo(PageInfo<User> userPageInfo);
 
+    User registerDtoToUser(RegisterDto registerDto);
 
 }

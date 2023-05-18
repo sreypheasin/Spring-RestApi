@@ -94,7 +94,7 @@ public class FileServiceImpl implements FileService {
                 long size = file.length();
                 int lastDotIndex = name.indexOf(".");
                 String extension = name.substring(lastDotIndex +1);
-                filesDto.add(new FileDto(name, url ,extension,size));
+//                filesDto.add(new FileDto(name, url ,extension,size));
             }
         }
         return filesDto;

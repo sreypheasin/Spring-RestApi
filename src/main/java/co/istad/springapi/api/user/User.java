@@ -1,11 +1,12 @@
 package co.istad.springapi.api.user;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import co.istad.springapi.api.auth.Role;
+import lombok.*;
 
-@Setter
+import java.util.List;
+
 @Getter
+@Setter
 @NoArgsConstructor
 public class User {
     private  Integer id;
@@ -15,4 +16,12 @@ public class User {
     private String studentCardId;
     private Boolean IsStudent;
     private  Boolean IsDeleted;
+    // Auth
+
+    private String email;
+    private String password;
+    private Boolean isVerified;
+    private String verifiedCode;
+
+    private List<Role> roles;
 }
