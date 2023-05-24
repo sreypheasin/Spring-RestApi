@@ -46,7 +46,7 @@ public class SecurityConfig {
 //        userDetailsManager.createUser(user);
 //        return userDetailsManager;
 //    }
-
+    @Bean
     public DaoAuthenticationProvider daoAuthenticationProvider (){
         DaoAuthenticationProvider auth = new DaoAuthenticationProvider();
         auth.setUserDetailsService(userDetailsService);
@@ -65,6 +65,8 @@ public class SecurityConfig {
             auth.requestMatchers("/api/v1/auth/**").permitAll();
             auth.requestMatchers(HttpMethod.GET, "/api/v1/users/**").hasAnyRole("ADMIN", "SYSTEM");
             auth.requestMatchers(HttpMethod.POST,"/api/v1/users/**").hasAnyRole("SYSTEM");
+            auth.requestMatchers("/api/v1/account-types/**").authenticated();
+
         });
         //TODO: 3. Security mechanism
         http.httpBasic();
